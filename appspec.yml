@@ -2,3 +2,8 @@
 version: 0.0
 os: linux
 # https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-files.html
+
+ AfterInstall:
+   - location: scripts/build_sdk.sh
+     timeout: 900
+     runas: root
